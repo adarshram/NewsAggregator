@@ -1,0 +1,16 @@
+<ul>
+<li *ngFor="let source of sources">
+  <a href="#article-area" (click)="detailedSource(source.id)">
+    {{source.name}}
+  </a>
+</li>
+</ul>
+<div id="article-area" style="">
+  <div *ngFor="let article of articles" style="border:1px solid;">
+    <a href="{{article.url}}" target="_blank">
+      {{article.title}}
+    </a>
+  </div>
+</div>
+
+
