@@ -1,0 +1,16 @@
+<app-loader *ngIf="!articles"></app-loader>
+
+<h1 style="text-align:center;" *ngIf="page_title">{{page_title}}</h1>
+
+<div *ngFor="let article of articles">
+  <a href="{{article.url}}" target="_blank">{{article.title}}</a>
+  <div>
+    {{article.description}}
+  </div>
+  <br />
+</div>
+<pre style="display:none;">
+    {{debug|json}}
+    </pre>
+
+

@@ -36,11 +36,7 @@ export class HeaderComponent {
     this.debug = response;
   }
   
-  detailedSource(feed_type){
-    this.api_service.getFeed(feed_type).subscribe(
-                       response => this.parseDetailResponse(response),
-                       error =>  this.errorMessage = <any>error);
-  }
+ 
 
   parseDetailResponse(response){
     this.articles = response.articles;
